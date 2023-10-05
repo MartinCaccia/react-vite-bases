@@ -1,6 +1,11 @@
+import { useEffect, useRef } from "react"
 import { useForm } from "./hooks/useForm"
 
 export const FormComponent = () => {
+
+    const focusRef: any = useRef()
+    console.log(focusRef)
+
     const initialForm = {
         userName:'',
         email:'',
@@ -13,6 +18,11 @@ export const FormComponent = () => {
         console.log(`${userName}, ${email}, ${password}`)
     }
 
+    useEffect(() => {
+        focusRef.current.focus()
+    }, [])
+    
+
   return (
     <form onSubmit={onSubmit}>
         <div className="mb-3">
@@ -20,6 +30,7 @@ export const FormComponent = () => {
             <div className="input-group">
                 <span className="input-group-text" id="inputGroupPrepend2">@</span>
                 <input 
+                    ref={focusRef}
                     type="text" 
                     className="form-control" 
                     id="userName" 

@@ -1,9 +1,9 @@
-export const fetchData = async(endpoint: string) => {
+export const fetchData = async(urn: string) => {
     try {
-        const response = await fetch(`https://dummyjson.com/${endpoint}`)
-        const data = await response.json()
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}/${urn}`)
+        const data: any | null = await response.json()
         return {data, error: null, isLoading: false}
-    } catch (error) {
+    } catch (error: any | null) {
         return {data: null, error, isLoading: false}
     } 
     // finally {

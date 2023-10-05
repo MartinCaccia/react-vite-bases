@@ -9,7 +9,9 @@ import './index.css'
 // import { ListComponent } from './components/ListComponent'
 // import UsersApp from './components/UsersApp'
 // import { HooksApp } from './components/HooksApp'
-import { FormComponent } from './components/FormComponent'
+// import { FormComponent } from './components/FormComponent'
+// import { TableComponent } from './components/TableComponent'
+import { HeavyCalculations } from './components/HeavyCalculations'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -23,7 +25,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     // <ListComponent></ListComponent>
     // <UsersApp></UsersApp>   
     // <HooksApp></HooksApp> //contiene al CounterComponent
+    // <FormComponent></FormComponent>
+    // <TableComponent></TableComponent>
     }
-    <FormComponent></FormComponent>
+    <HeavyCalculations></HeavyCalculations>
   </React.StrictMode>,
 )

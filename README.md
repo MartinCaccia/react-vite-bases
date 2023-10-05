@@ -7,11 +7,11 @@
 1. App (Vite default)
 2. FirstComponent (Hello world!)
 3. ArrowFunctionComponent (Hello world! and variables)
-4. PropsComponent
-5. CounterComponent
+4. PropsComponent (about Props in components)
+5. CounterComponent (A counter component example)
 6. ListComponent (Grocery list)
-7. UsersApp (List of Users and post details)
-8. HooksApp contain the CounterComponent
+7. UsersApp (List of users and post details)
+8. HooksApp (contain the CounterComponent)
 9. FormComponent
 
 

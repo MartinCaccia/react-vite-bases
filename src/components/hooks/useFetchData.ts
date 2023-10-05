@@ -1,27 +1,26 @@
 import { useEffect, useState } from "react"
 import { fetchData } from "../helpers/fetchData";
 
-export const useFetchData = (endpoint: string) => {
+export const useFetchData = (urn: string) => {
 
-    const [data, setData] = useState<any>([])
-    const [isLoading, setIsLoading] = useState<boolean>(true)
-    const [error, setError] = useState<any | null>(null);
+    const [state, setState] = useState({
+      data: null,
+      error: null,
+      isLoading: true
+    })
 
     const getData = async() =>{
-        setIsLoading(true);
-        const {data, error, isLoading} = await fetchData(endpoint)
-        setData(data)
-        setError(error)
-        setIsLoading(isLoading)
+        const {data, error, isLoading} = await fetchData(urn)
+        setState({
+          data,
+          error,
+          isLoading
+        })
     }
 
     useEffect(() => { 
         getData() 
-    }, [endpoint])  
+    }, [urn])  
 
-  return {
-    data,
-    error,
-    isLoading
-  }
+  return { ...state }
 }

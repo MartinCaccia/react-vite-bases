@@ -7,9 +7,9 @@ export const DataList = ({handleTitle}: any) => {
     const [endpoint, setEndpoint] = useState('users')
     const { data, error, isLoading } = useFetchData(endpoint)
 
-    let users: User[] = [], posts: Post[] = []
-    if (data.users && isLoading === false) users = data.users
-    if (data.posts && isLoading === false) posts = data.posts
+    let users: User[] | any, posts: Post[] | any
+    if (data && isLoading === false) users = data['users']
+    if (data && isLoading === false) posts = data['posts']
 
     const showUserPosts = (id: number) => {
         handleTitle(`Posts List from userId ${id}`)
@@ -17,13 +17,13 @@ export const DataList = ({handleTitle}: any) => {
     }
     
     if (isLoading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error.message}</div>;
+    if (error) return <div>Error: {error}</div>;
 
   return (
     <>
         <ol>
             {
-                data.users ?                
+                data['users'] ?                
                 users.map(user =>
                         <li key={user.id}>
                             <p>{`Name: ${ user.firstName }`}</p>
