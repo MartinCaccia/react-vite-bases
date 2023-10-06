@@ -13,6 +13,11 @@
 7. UsersApp (List of users and post details)
 8. HooksApp (contain the CounterComponent)
 9. FormComponent
+10. TableComponent
+11. HeavyCalculations (useMemo)
+12. CallBackComponent
+13. ReduceComponent (example to understand hook useReducer)
+14. UseReducerComponent (useReducer)
 
 
 -------------

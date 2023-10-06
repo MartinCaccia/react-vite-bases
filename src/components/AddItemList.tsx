@@ -8,10 +8,9 @@ export const AddItemList = ({addItem}: any) => {
   }
   const OnClick = () => {
     onSubmitValue
-    // Si enviara el setValue del padre seria asi, pero por una cuestion de responsabilidades
-    // es mejor que quede del lado del padre.
+    // Si el padre (ItemsList) me enviara el setValue, realizaria:
     // addItem(items => [...items, { id: items.length+1, name: inputValue, done: false}])
-    // Entonces envio solamente el valor del input a la funcion del padre:
+    // por una cuestion de responsabilidades envio el valor del input a la funcion del padre:
     addItem(inputValue.trim())
     setInputValue('')
   }  

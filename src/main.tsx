@@ -11,7 +11,10 @@ import './index.css'
 // import { HooksApp } from './components/HooksApp'
 // import { FormComponent } from './components/FormComponent'
 // import { TableComponent } from './components/TableComponent'
-import { HeavyCalculations } from './components/HeavyCalculations'
+// import { HeavyCalculations } from './components/HeavyCalculations'
+// import { CallBackComponent } from './components/CallBackComponent'
+// import { ReduceComponent } from './components/ReduceComponent'
+import { UseReducerComponent } from './components/UseReducerComponent'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -27,7 +30,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     // <HooksApp></HooksApp> //contiene al CounterComponent
     // <FormComponent></FormComponent>
     // <TableComponent></TableComponent>
+    // <HeavyCalculations></HeavyCalculations>
+    // <CallBackComponent></CallBackComponent>
+    // <ReduceComponent></ReduceComponent>
     }
-    <HeavyCalculations></HeavyCalculations>
+    <UseReducerComponent></UseReducerComponent>
   </React.StrictMode>,
 )
