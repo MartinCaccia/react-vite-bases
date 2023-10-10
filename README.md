@@ -18,7 +18,7 @@
 12. CallBackComponent
 13. ReduceComponent (example to understand hook useReducer)
 14. UseReducerComponent (useReducer)
-
+15. HOC (high order component -HOCWithLoader)
 
 -------------
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

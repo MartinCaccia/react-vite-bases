@@ -72,23 +72,27 @@ export const UseReducerComponent = () => {
     return (
         <>
           <h2>useReducer</h2>
+          <hr/>
           <form onSubmit={handleSubmit}>
-            <input 
-                ref={focusRef}            
-                id="newTask"
-                name="newTask"
-                type='text' 
-                placeholder='Add new task' 
-                value={newTask}
-                onChange={onInputChange}
-            />
-            <button type="submit" onClick={()=> AddItem(newTask)}>Add task</button>
+            <div className="form-group">
+                <input 
+                    className='form-control'
+                    ref={focusRef}            
+                    id="newTask"
+                    name="newTask"
+                    type='text' 
+                    placeholder='Add new task' 
+                    value={newTask}
+                    onChange={onInputChange}
+                />
+              </div>
+              <button type="submit" className='btn btn-primary' onClick={()=> AddItem(newTask)}>Add task</button>
                 <ul>
                     {tasks.map(task => (
                         <li key={task.id}>
                         <p>{ JSON.stringify(task) }</p>
-                        <button type="submit" onClick={() => updateItem(task)}>Update to done</button>
-                        <button type="submit" onClick={() => deleteTask(task)}>Delete task</button>
+                        <button type="submit" className='btn btn-primary' onClick={() => updateItem(task)}>Update to done</button>
+                        <button type="submit" className='btn btn-danger' onClick={() => deleteTask(task)}>Delete task</button>
                     </li>
                     ))}
                 </ul>

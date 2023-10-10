@@ -15,7 +15,9 @@ import './index.css'
 // import { CallBackComponent } from './components/CallBackComponent'
 // import { ReduceComponent } from './components/ReduceComponent'
 import { UseReducerComponent } from './components/UseReducerComponent'
+import { HOCWithLoader } from './components/HOCWithLoader'
 
+const NewComponent = HOCWithLoader(UseReducerComponent)
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -34,6 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     // <CallBackComponent></CallBackComponent>
     // <ReduceComponent></ReduceComponent>
     }
-    <UseReducerComponent></UseReducerComponent>
+    {/* <UseReducerComponent></UseReducerComponent> */}
+    <NewComponent></NewComponent>
   </React.StrictMode>,
 )
