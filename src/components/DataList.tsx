@@ -26,9 +26,17 @@ export const DataList = ({handleTitle}: any) => {
                 data['users'] ?                
                 users.map(user =>
                         <li key={user.id}>
-                            <p>{`Name: ${ user.firstName }`}</p>
-                            <p>{`Email: ${ user.lastName }`}</p>                            
-                            <button onClick={()=>showUserPosts(user.id)}>Show posts</button>
+                            <div style={{"display": "flex"}}>
+                                <div>
+                                    <p>{`Name: ${ user.firstName }`}</p>
+                                    <p>{`Email: ${ user.lastName }`}</p>   
+                                </div> 
+                                <div>
+                                    <button className="btn btn-primary" onClick={()=>showUserPosts(user.id)} style={{"margin" : "15px", "verticalAlign": "center"}}>
+                                        Show posts
+                                    </button>
+                                </div>                        
+                            </div>
                         </li>
                 )
                 :

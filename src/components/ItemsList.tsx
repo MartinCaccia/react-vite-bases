@@ -24,10 +24,10 @@ export const ItemsList = ({value, setValue}: ItemsProps) => {
             // quede del lado del padre y no del hijo por eso le paso la funcion.
             }
             <AddItemList addItem={AddItem}></AddItemList>
-            <ol>
+            <ol className="list-group list-group-numbered">
             {
                 value.map(item =>
-                    <li key={item.id}>
+                    <li key={item.id} className="list-group-item">
                         { item.done ? <del>{item.name}</del> : item.name }
                         { item.done && ' ✅'}
                     </li>

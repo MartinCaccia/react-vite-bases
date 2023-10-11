@@ -42,6 +42,42 @@ export const NavCards = () => {
                 Counter component.
             </p>
         </NavLink>
+
+        <NavLink to="/listcomponent" className={styles.card}>
+            <h2>
+                Example 5 <span>-&gt;</span>
+            </h2>
+            <p>
+                List component.
+            </p>
+        </NavLink>        
+
+        <NavLink to="/usersapp" className={styles.card}>
+            <h2>
+                Example 6 <span>-&gt;</span>
+            </h2>
+            <p>
+                Users app
+            </p>
+        </NavLink>    
+
+        <NavLink to="/formcomponent" className={styles.card}>
+            <h2>
+                Example 7 <span>-&gt;</span>
+            </h2>
+            <p>
+                Form component
+            </p>
+        </NavLink> 
+
+        <NavLink to="/tablecomponent" className={styles.card}>
+            <h2>
+                Example 8 <span>-&gt;</span>
+            </h2>
+            <p>
+                Table component
+            </p>
+        </NavLink>         
     </div>
   )
 }

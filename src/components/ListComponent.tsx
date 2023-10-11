@@ -9,7 +9,7 @@ export const ListComponent = () => {
     const [item, setItem] = useState(arrayList)    
   return (
     <>
-        <h1>Grocery list</h1>
+        <h1 style={{"textAlign": "left"}}>Grocery list</h1>
         <ItemsList value={item} setValue={setItem}></ItemsList>
     </>
   )

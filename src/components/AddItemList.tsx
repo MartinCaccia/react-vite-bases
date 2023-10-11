@@ -20,14 +20,17 @@ export const AddItemList = ({addItem}: any) => {
   }
   return (
     <form onSubmit={onSubmitValue}>
-      <input 
-        type='text' 
-        placeholder='Add new item list' 
-        className="AddItemList" 
-        value={inputValue}
-        onChange={addNewValue}
-      />
-      <button onClick={OnClick}>Add item</button>
+      <div style={{"display": "flex"}}>
+        <input 
+          type='text' 
+          placeholder='Add new item list' 
+          className="form-control"
+          style={{"height" : "100%", "width" : "40%", "margin" : "5px"}}
+          value={inputValue}
+          onChange={addNewValue}
+        />
+        <button className='btn btn-primary' onClick={OnClick}>Add item</button>
+      </div>
     </form>
   )
 }
