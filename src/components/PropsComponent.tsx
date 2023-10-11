@@ -24,7 +24,7 @@ export default function PropsComponent({ title, subtitle, number}: Props) {
 // }
 
 PropsComponent.defaultProps = {
-    title: 'algo default',
-    subtitle: 'default sub',
+    title: 'Title default',
+    subtitle: 'default subtitle',
     number: 6,
 }

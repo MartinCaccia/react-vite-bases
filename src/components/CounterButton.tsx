@@ -8,7 +8,7 @@ interface ButtonProps {
 export const CounterButton = memo(({name, functionButton}: ButtonProps) => {
     console.log('Im redrawing myself!') // no more thanks useCallBack and memo.
     return (
-        <button className="CounterButtons" onClick={ ()=>functionButton(name) }>
+        <button className={name==='Reset'?"btn btn-danger CounterButtons":"btn btn-primary CounterButtons"} onClick={ ()=>functionButton(name) }>
             {name}
         </button>
     )
