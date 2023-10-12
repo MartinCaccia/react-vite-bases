@@ -11,7 +11,8 @@ const object = { name: 'un nombre', id: 6 }
 const fecha = new Date()
 
 export const ArrowFunctionComponent = () => {
-  const user = useContext(UserContext)
+  const {userData} = useContext(UserContext)
+
   return (
     <>
         <h1>Hello world!</h1>
@@ -27,7 +28,7 @@ export const ArrowFunctionComponent = () => {
         <hr/>
         <p>
           { // Backtick: AltGr + }} = ``
-            `By: ${user?.name} email: ${user?.email}` 
+            `User context name: ${userData?.name} email: ${userData?.email}` 
           }
         </p>  
     </>

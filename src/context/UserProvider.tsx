@@ -1,13 +1,14 @@
-import { UserContext } from "./UserContext"
+import { PropsWithChildren, useState } from "react"
+import { UserContext, UserData } from "./UserContext"
 
-const user = {
-    name: "Martin Caccia",
-    email: "martin.caccia@gmail.com",
-}
-
-export const UserProvider = ({children}:any) => {
+export const UserProvider = ({children}: PropsWithChildren<{}>) => {
+  const initialUser = {
+    name: "initial name",
+    email: "initial.email@gmail.com",
+  }
+  const [userData, setUser] = useState<UserData | null>(initialUser)
   return (
-    <UserContext.Provider value={user}>
+    <UserContext.Provider value={{userData, setUser}}>
         {children}
     </UserContext.Provider>
   )

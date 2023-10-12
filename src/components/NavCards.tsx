@@ -23,7 +23,10 @@ export const NavCards = () => {
             <h2>
                 Example 2 <span>-&gt;</span>
             </h2>
-            <p>An arrow function component + variables in tsx + useContext.</p>
+            <p>
+                An arrow function component + variables in tsx + useContext
+                + user context initial state.
+            </p>
         </NavLink>
 
         <NavLink to="/propscomponent" className={styles.card}>
@@ -31,7 +34,7 @@ export const NavCards = () => {
                 Example 3 <span>-&gt;</span>
             </h2>
             <p>
-                Props component + PropTypes + defaultProps.
+                Props component + PropTypes + defaultProps + button to change user context content.
             </p>
         </NavLink>
 
