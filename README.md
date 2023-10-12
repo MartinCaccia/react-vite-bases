@@ -22,6 +22,8 @@
 
 ![Alt text](public/react-bases.png?raw=true "screen shot")
 
+Credits: Based on Sergie Code youtube video (https://youtu.be/ladwC6Lrs-M?si=9QtaDeNxi3FtGjRV)
+
 -------------
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
