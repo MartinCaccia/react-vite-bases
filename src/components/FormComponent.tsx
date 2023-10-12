@@ -26,13 +26,12 @@ export const FormComponent = () => {
   return (
     <form onSubmit={onSubmit}>
         <div className="mb-3">
-            <label className="form-label">Username</label>
-            <div className="input-group">
-                <span className="input-group-text" id="inputGroupPrepend2">@</span>
+            <label className="form-label" style={{"display": "flex", "alignContent": "flex-start" }}>Username</label>                
                 <input 
                     ref={focusRef}
                     type="text" 
                     className="form-control" 
+                    style={{"display": "flex", "justifyContent": "flex-start", "width": "300px" }}
                     id="userName" 
                     name="userName" 
                     placeholder="Enter username" 
@@ -40,13 +39,13 @@ export const FormComponent = () => {
                     onChange={onInputChange} 
                     required
                 />
-            </div>
         </div>
         <div className="mb-3">
-            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+            <label htmlFor="exampleInputEmail1" className="form-label" style={{"display": "flex", "alignContent": "flex-start" }}>Email address</label>
             <input 
                 type="email" 
-                className="form-control" 
+                className="form-control"
+                style={{"display": "flex", "alignContent": "flex-start", "width": "300px" }} 
                 id="email" 
                 name="email" 
                 placeholder="Enter email" 
@@ -54,24 +53,24 @@ export const FormComponent = () => {
                 onChange={onInputChange}  
                 required
             />
-            <div id="emailHelp" >We'll never share your email with anyone else.</div>
+            <div id="emailHelp" style={{"display": "flex", "alignContent": "flex-start" }}>We'll never share your email with anyone else.</div>
         </div>        
         <div className="mb-3">
-            <label className="form-label">Password</label>
-            <div className="input-group">
+            <label className="form-label" style={{"display": "flex", "alignContent": "flex-start" }}>Password</label>
                 <input 
                     type="password" 
                     className="form-control" 
+                    style={{"display": "flex", "alignContent": "flex-start", "width": "300px" }}
                     id="password" 
                     name="password" 
+                    placeholder="Enter password" 
                     value={password} 
                     onChange={onInputChange}  
                     required 
                 />
-            </div>
         </div>
         <div className="mb-3">
-            <button className="btn btn-primary" type="submit" >Submit form</button>
+            <button className="btn btn-primary" type="submit" style={{"display": "flex", "alignContent": "flex-start" }}>Submit form</button>
         </div>
     </form>    
   )

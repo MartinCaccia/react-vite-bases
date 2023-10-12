@@ -3,8 +3,6 @@ import { arrayList } from "../mocks/arrayList"
 import { ItemsList } from "./ItemsList"
 import '../styles/ListComponent.css'
 
-// Backtick: AltGr + }} = ``
-
 export const ListComponent = () => {
     const [item, setItem] = useState(arrayList)    
   return (

@@ -74,28 +74,29 @@ export const UseReducerComponent = () => {
           <h2>useReducer</h2>
           <hr/>
           <form onSubmit={handleSubmit}>
-            <div className="form-group">
-                <input 
-                    className='form-control'
-                    ref={focusRef}            
-                    id="newTask"
-                    name="newTask"
-                    type='text' 
-                    placeholder='Add new task' 
-                    value={newTask}
-                    onChange={onInputChange}
-                />
-              </div>
+            <div style={{"display": "flex"}}>
+              <input 
+                  className='form-control'
+                  style={{"height" : "100%", "width" : "40%", "margin" : "5px"}}
+                  ref={focusRef}            
+                  id="newTask"
+                  name="newTask"
+                  type='text' 
+                  placeholder='Add new task' 
+                  value={newTask}
+                  onChange={onInputChange}
+              />
               <button type="submit" className='btn btn-primary' onClick={()=> AddItem(newTask)}>Add task</button>
-                <ul>
-                    {tasks.map(task => (
-                        <li key={task.id}>
-                        <p>{ JSON.stringify(task) }</p>
-                        <button type="submit" className='btn btn-primary' onClick={() => updateItem(task)}>Update to done</button>
-                        <button type="submit" className='btn btn-danger' onClick={() => deleteTask(task)}>Delete task</button>
-                    </li>
-                    ))}
-                </ul>
+            </div>
+              <ul>
+                {tasks.map(task => (
+                  <li key={task.id}>
+                    <p>{ JSON.stringify(task) }</p>
+                    <button type="submit" className='btn btn-primary' onClick={() => updateItem(task)}>Update to done</button>
+                    <button type="submit" className='btn btn-danger' onClick={() => deleteTask(task)}>Delete task</button>
+                  </li>
+                ))}
+              </ul>
             </form>
         </>
       );

@@ -9,6 +9,7 @@ function App() {
 
   return (
     <>
+      <h1 style={{"padding": "1rem 0"}}>Vite + React</h1>
       <div className={styles.center}>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -17,9 +18,10 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button className='btn btn-primary' onClick={() => setCount((count) => count + 1)}>
+      <div className="card" style={{"display": "flex", "justifyContent": "center",
+          "alignItems": "center", "position": "relative", "padding": "1rem 1rem"}}>
+        <button className='btn btn-primary' onClick={() => setCount((count) => count + 1)}
+         style={{"width" : "150px"}}>
           count is {count}
         </button>
         <p>

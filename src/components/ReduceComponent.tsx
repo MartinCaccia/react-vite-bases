@@ -60,6 +60,9 @@ console.log(taskReducer(initialState, deleteActionTask))
 
 export const ReduceComponent = () => {
   return (
-    <div>ReduceComponent</div>
+    <>
+        <h2>Reduce component</h2>
+        <div>see the page console with ctrl+shift+i</div>
+    </>
   )
 }
