@@ -20,6 +20,8 @@
 14. UseReducerComponent (useReducer)
 15. HOC (high order component -HOCWithLoader)
 
+![Alt text](public/react-bases.png?raw=true "screen shot")
+
 -------------
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
